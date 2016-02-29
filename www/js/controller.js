@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
     .controller('LoginCtrl', ['$scope', '$state', 'UserService', '$ionicHistory',
         function($scope, $state, UserService, $ionicHistory, $window) {
             $scope.user = {};
+            $scope.title = 'Login';
             $scope.loginSubmitForm = function(form) {
                 if (form.$valid) {
                     UserService.login($scope.user)
