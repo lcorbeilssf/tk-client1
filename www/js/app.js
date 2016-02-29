@@ -43,5 +43,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'RESTConnection'])
   .state('lobby', {
     url: '/lobby',
     templateUrl: 'templates/lobby.html',
+    controller:'LobbyCtrl'
   });
 });
