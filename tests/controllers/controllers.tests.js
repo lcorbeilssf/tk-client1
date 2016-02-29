@@ -11,7 +11,7 @@ describe('Controllers', function(){
         $controller('LoginCtrl', {$scope: scope});
     }));
     // tests start here
-    it('should have a title with value of Login', function(){
+    it('should have a title with  Login', function(){
         expect(scope.title).toEqual("Login");
     });
 });
