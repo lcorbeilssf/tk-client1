@@ -4,13 +4,18 @@ angular.module('SortingArray', [])
         service.sort = function(unsortedArray) {
             var sortedArray = unsortedArray;
             var swapped;
-            for (var i = 0; i <= sortedArray.length; i++) {
-                if (sortedArray[i] > sortedArray[i + 1]) {
-                    var temp = sortedArray[i];
-                    sortedArray[i] = sortedArray[i + 1];
-                    sortedArray[i + 1] = temp;
+            do {
+
+                swapped = false
+                for (var i = 0; i <= sortedArray.length; i++) {
+                    if (sortedArray[i] > sortedArray[i + 1]) {
+                        var temp = sortedArray[i];
+                        sortedArray[i] = sortedArray[i + 1];
+                        sortedArray[i + 1] = temp;
+                        swapped = true;
+                    }
                 }
-            }
+            } while (swapped);
             return sortedArray;
         };
     });
