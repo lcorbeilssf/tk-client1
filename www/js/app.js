@@ -59,6 +59,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'RESTConnection', 'TK
         return TKQuestionsService.getQuestion($stateParams.testID);
       }
     }
-  });
+  })
+  .state('results', {
+    url: '/results',
+    templateUrl: 'templates/results.html'
+});
+  
   
 });
