@@ -236,14 +236,13 @@ angular.module('starter.controllers', [])
         ])
         .controller('ResultsCtrl', ['$scope', 'TKAnswersService', '$ionicHistory', '$state',
             function($scope, TKAnswersService, $ionicHistory, $state) {
-                $scope.menuButtonTapped = function()
-{        
-     $ionicHistory.nextViewOptions({
-         historyRoot: true,
-         disableBack: true
-     });
-     $state.go('lobby');
-};
+                $scope.menuButtonTapped = function() {
+                    $ionicHistory.nextViewOptions({
+                        historyRoot: true,
+                        disableBack: true
+                    });
+                    $state.go('lobby');
+                };
             }
         ])
     );
